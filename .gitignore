@@ -1,9 +1,9 @@
-##ignore this file##
+﻿##ignore this file##
 /target/ 
 
 .classpath
 .project
-/.settings/      
+.settings/
  ##filter databfile、sln file##
 *.mdb  
 *.ldb  
