@@ -6,6 +6,8 @@ target/*
 *.settings
 *.idea
 *.iml
+bin/*
+temp/*
  ##filter databfile、sln file##
 *.mdb  
 *.ldb  
