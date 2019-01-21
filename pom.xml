@@ -9,8 +9,9 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>javabase1jvm</module>
-        <module>javabase2java</module>
+        <module>javabase1Jvm</module>
+        <module>javabase2Java</module>
+        <module>javabase3DesignPatterns</module>
     </modules>
 
 
