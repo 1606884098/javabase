@@ -65,7 +65,7 @@ import java.util.Date;
  *      java规范：
  *      1.jvm规范：定了二进制class文件和jvm指令集，运行
  *      2.java语言规范：定义了什么是java语言
- *      .class文件是可以运行在任何支持Java虚拟机的硬件平台或者java虚拟机的操作系统上的二进制文件
+ *      .class文件是可以运行在任何支持Java虚拟机的硬件平台或者java虚拟机的操作系统上的二进制文件.
  */
 public class ComputerBase {
     public static void main(String[] args) {
