@@ -1,8 +1,28 @@
 package com.javabase.jvm;
 
+import java.text.SimpleDateFormat;
+import java.util.BitSet;
+import java.util.Date;
+
 /**
 计算机基础知识：
-    计算机的文字，图片，视频等数据都是二进制存储运算的。（基本数据类型，引用数据类型，对象，音频，视频）
+    1.计量单位：
+    位：我们常说的bit，位就是传说中提到的计算机中的最小数据单位：说白了就是0或者1；
+    计算机内存中的存储都是01这两个东西。
+
+    字节：英文单词：（byte），byte是存储空间的基本计量单位。1byte 存1个英文字母，
+    2个byte存一个汉字。规定上是1个字节等于8个比特（1Byte = 8bit）。
+
+    字：字就是由一些字符组成的，是据算计处理数据时一次存取，加工和传送的数据长度。
+    字由若干字节构成，字的位数叫字长，一台8位机子：一个字等于1个字节，字长为8位，
+    如果是16位的机子，一个字等于2个字节，字长为16，字是计算机处理数据和运算的单位。
+    由此可见，计算机的字长决定了其CPU一次操作处理实际位数的多少，即：计算机的字长越大，其性能越好。
+
+      1byte=8bit; 1kb=1024byte;
+      1mb=1024kb; 1gb=1024mb;
+      1tb=1024gb; 1pb=1024tb; 1eb=1024pb
+
+    2.计算机的文字，图片，视频等数据都是二进制存储运算的。（基本数据类型，引用数据类型，对象，音频，视频）
     计算机与人类交互是按照人的习惯利用算法输入输出（十进制，图片显示）
     计算机启动：接通电源开关，主板，内存，cpu，硬盘，显卡等硬件接通电源。
     主板连接电源按需要分配控制他硬件的电流。BIOS安全检查，如果发现安装有系统，
@@ -33,6 +53,11 @@ package com.javabase.jvm;
     有带参数的构造函数，无参数的构造函数就没有了
     switch case类型byte char short int String 枚举类型 case语句后面跟的枚举值，只需要枚举值即可，不需要声明是具体的枚举类Season.spring将报错
     java的继承private修饰的成员，构造函数。
+
+    window 转换目录用cd  如果转换盘符直接d:就可以了
+    cmd窗口编码utf-8 直接输入：chcp 65001
+    cmd窗口编码gbk 直接输入：chcp 936
+
  * jvm基础：
  *      jre=jvm+java核心类库
  *      jvm=jdk1.8.0_171\jre\bin\server\jvm.dll就是java虚拟机 java核心类库=jdk1.8.0_171\jre\lib\rt.jar
@@ -44,6 +69,20 @@ package com.javabase.jvm;
  */
 public class ComputerBase {
     public static void main(String[] args) {
+        BitSet a=new BitSet();
+        a.set(1);
+        a.set(11);
+        a.set(19);
+        a.set(14);
+        a.set(16);
+        a.set((int) 199999999922222L);
 
+        Date currentTime = new Date();
+        String currentStr = new SimpleDateFormat("yyyy-MM-dd").format(currentTime);
+        System.out.println(currentStr);
+        System.out.println(a.size());
+        System.out.println(a.cardinality());
+
+        System.out.println(a.get(1));
     }
 }
