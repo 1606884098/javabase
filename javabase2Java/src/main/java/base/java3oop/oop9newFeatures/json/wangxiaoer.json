@@ -1,0 +1,12 @@
+{
+  "name" :"王小二",
+  "age": 22,
+  "birthday" : "1990-12-1",
+  "commont":"//注意:json里没有Date这种时间的类型,所以用string;需要了解一下时间戳",
+  "school" : "蓝翔",
+  "major": ["理发","挖掘机"],
+  "has_girlfriend":false,
+  "car": null,
+  "house": null,
+  "commont": "这是一个注释:注意:json中没有注释的写法,但是我们可以曲线救国。两个commont后面把前面的值覆盖掉"
+}
