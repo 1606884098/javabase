@@ -19,7 +19,7 @@ public class CallableFutureTest {
         Future f2 = pool.submit(c2);
 
         // 从Future对象上获取任务的返回值，并输出到控制台
-        System.out.println(">>>" + f1.get().toString());
+        System.out.println(">>>" + ((Person)f1.get()).NAME);
         System.out.println(">>>" + f2.get().toString());
 
         // 关闭线程池
