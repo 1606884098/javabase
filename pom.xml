@@ -12,6 +12,7 @@
         <module>javabase1Jvm</module>
         <module>javabase2Java</module>
         <module>javabase3DesignPatterns</module>
+        <module>javabase4jdbc</module>
     </modules>
 
 
