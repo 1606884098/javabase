@@ -7,7 +7,7 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 
-/*
+/**
 在java中网络通讯业称作为Socket(插座)通讯，要求通讯 的两台器都必须要安装Socket。
 不同的协议就有不同 的插座（Socket）
 UDP通讯协议的特点：
