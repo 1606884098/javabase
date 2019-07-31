@@ -3,6 +3,10 @@ package base.java1dataType;
 public class DataType {
     public static void main(String[] args) {
         /**
+         * 二进制数的一位包含的信息或2个选项中特别指定1个的需要信息量称为一比特，
+         * 是表示信息的最小单位，只有两种状态：0和1。1位即1bit 只能表示 0或1 （二进制存储）.一个字节(byte)为8个比特，
+         * 一个英文字母通常占用一个字节，一个汉字通常占用两个字节。
+         *
          * 1.基本数据类型
          *  1.1整数型
          *      byte 1b 8bit -128 ~ 127 默认值0
@@ -18,5 +22,8 @@ public class DataType {
          *      char 2b 16bit 默认值为空 /u0000 是一个空的字符，它与null和""不同，是特殊的“空”
          *
          */
+       Integer integer=null;
+       Integer a=integer+12;//报空指针异常 所以定义包装类型时 建议默认值 包括数据的字段也建议默认值
+
     }
 }
