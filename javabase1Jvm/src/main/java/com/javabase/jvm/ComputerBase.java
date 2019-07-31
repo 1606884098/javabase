@@ -1,5 +1,6 @@
 package com.javabase.jvm;
 
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.BitSet;
 import java.util.Date;
@@ -70,20 +71,25 @@ import java.util.Date;
  */
 public class ComputerBase {
     public static void main(String[] args) {
+        String rateString="0.0073243243";
+        Double rateDouble=Double.parseDouble(rateString)*100;
+        BigDecimal bigDecimal = BigDecimal.valueOf(rateDouble);
+        System.out.println(bigDecimal.toPlainString()+"%");
+
         BitSet a=new BitSet();
         a.set(1);
+        a.set(21);
         a.set(11);
         a.set(19);
         a.set(14);
         a.set(16);
         a.set((int) 199999999922222L);
-
-        Date currentTime = new Date();
-        String currentStr = new SimpleDateFormat("yyyy-MM-dd").format(currentTime);
-        System.out.println(currentStr);
         System.out.println(a.size());
         System.out.println(a.cardinality());
+        System.out.println(a.get(21));//
 
-        System.out.println(a.get(1));
+        Date currentTime = new Date();
+        String currentStr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(currentTime);//hh:mm:ss  是12小时制的
+        System.out.println(currentStr);
     }
 }
