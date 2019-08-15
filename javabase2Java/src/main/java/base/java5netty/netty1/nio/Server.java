@@ -66,7 +66,7 @@ public class Server implements Runnable{
 						}
 						//9 写数据
 						if(key.isWritable()){
-							//this.write(key); //ssc
+							this.write(key); //ssc
 						}
 					}
 					

@@ -22,8 +22,16 @@ public class DataType {
          *      char 2b 16bit 默认值为空 /u0000 是一个空的字符，它与null和""不同，是特殊的“空”
          *
          */
-       Integer integer=null;
-       Integer a=integer+12;//报空指针异常 所以定义包装类型时 建议默认值 包括数据的字段也建议默认值
+       //Integer integer=null;
+       //Integer a=integer+12;//报空指针异常 所以定义包装类型时 建议默认值 包括数据的字段也建议默认值
+
+        Long a1=123200l;
+        //Long a4=null;
+
+        Double a3=(double)a1;
+       // Double a5=(double)a4;
+        Double a2=(double)(a1/(double)100);
+        System.out.println(a2);
 
     }
 }

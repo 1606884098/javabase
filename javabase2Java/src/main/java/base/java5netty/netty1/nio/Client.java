@@ -38,6 +38,7 @@ public class Client {
 				sc.write(buf);
 				//清空缓冲区数据
 				buf.clear();
+				System.out.println("-----继续执行------");
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

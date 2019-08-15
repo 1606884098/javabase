@@ -26,6 +26,7 @@ public class ServerHandler implements Runnable {
 				body = in.readLine();
 				if(body == null) break;
 				System.out.println("Server:" + body);
+				//Thread.sleep(1000);
 				out.println("Server response"+a);
 			}
 		} catch (Exception e) {
