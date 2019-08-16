@@ -28,7 +28,7 @@ public class Client {
 			while(true){
 				//定义一个字节数组，然后使用系统录入功能：
 				byte[] bytes = new byte[1024];
-				System.in.read(bytes);//回车  是发送数据的意思
+				System.in.read(bytes);//回车  就是数据写完了
 				
 				//把数据放到缓冲区中
 				buf.put(bytes);
