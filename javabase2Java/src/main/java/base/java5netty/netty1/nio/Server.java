@@ -45,9 +45,9 @@ public class Server implements Runnable{
 		while(true){
 			try {
 				//1 必须要让多路复用器开始监听
-				this.seletor.select();
+				this.seletor.select();//如果客户端要和本服务器进行交互 必须先将通道注册到这里来，所有的客户端的通道都会注册到这里来
 				//2 返回多路复用器已经选择的结果集
-				Iterator<SelectionKey> keys = this.seletor.selectedKeys().iterator();
+				Iterator<SelectionKey> keys = this.seletor.selectedKeys().iterator();//获取到所有注册到这里来的通道的key
 				//3 进行遍历
 				while(keys.hasNext()){
 					//4 获取一个选择的元素
@@ -56,6 +56,9 @@ public class Server implements Runnable{
 					keys.remove();
 					//6 如果是有效的
 					if(key.isValid()){
+						/**
+						 * 每一个通道都有4个状态 连接，阻塞，可读，可写  通过状态和客户端确认要进行什么操作
+						 */
 						//7 如果为阻塞状态
 						if(key.isAcceptable()){
 							this.accept(key);
