@@ -1,5 +1,7 @@
 package base.java1dataType;
 
+import java.math.BigDecimal;
+
 public class DataType {
     public static void main(String[] args) {
         /**
@@ -32,6 +34,11 @@ public class DataType {
        // Double a5=(double)a4;
         Double a2=(double)(a1/(double)100);
         System.out.println(a2);
+
+        Long s=1324l;
+        String aaa= BigDecimal.valueOf(s).divide(new BigDecimal(100)).toPlainString();
+        System.out.println(aaa);
+
 
     }
 }
