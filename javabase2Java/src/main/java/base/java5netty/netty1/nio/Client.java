@@ -34,7 +34,7 @@ public class Client {
 				buf.put(bytes);
 				//对缓冲区进行复位
 				buf.flip();
-				//写出数据
+				//写出数据（发送数据到服务端）
 				sc.write(buf);
 				//清空缓冲区数据
 				buf.clear();
