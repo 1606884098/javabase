@@ -3,10 +3,7 @@ package base.java5netty.netty1.nio;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
-import java.nio.channels.ServerSocketChannel;
-import java.nio.channels.SocketChannel;
+import java.nio.channels.*;
 import java.util.Iterator;
 
 /**
@@ -80,7 +77,7 @@ public class Server implements Runnable{
 		}
 	}
 	
-	private void write(SelectionKey key){
+	private void write(SelectionKey key) throws ClosedChannelException {
 		ServerSocketChannel ssc =  (ServerSocketChannel) key.channel();
 		//ssc.register(this.seletor, SelectionKey.OP_WRITE);
 	}
@@ -136,6 +133,6 @@ public class Server implements Runnable{
 		
 		new Thread(new Server(8765)).start();;
 	}
-	
-	
+
+
 }
