@@ -30,7 +30,7 @@ public class ServerCompletionHandler implements CompletionHandler<AsynchronousSo
 				//获取读取的数据
 				String resultData = new String(attachment.array()).trim();
 				System.out.println("Server -> " + "收到客户端的数据信息为:" + resultData);
-				String response = "服务器响应, 收到了客户端发来的数据: " + resultData;
+				String response = "服务器响应, 收到了客户端发来的数据: " + resultData+"----------我是服务端来的数据";
 				write(asc, response);
 			}
 			@Override
@@ -41,6 +41,7 @@ public class ServerCompletionHandler implements CompletionHandler<AsynchronousSo
 	}
 	
 	private void write(AsynchronousSocketChannel asc, String response) {
+		//这里的读的意思是客端端的数据准备好了，服务端可以将数据写出到控制台或者数据库或者其他地方
 		try {
 			ByteBuffer buf = ByteBuffer.allocate(1024);
 			buf.put(response.getBytes());

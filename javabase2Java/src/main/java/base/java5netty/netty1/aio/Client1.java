@@ -6,11 +6,11 @@ import java.nio.ByteBuffer;
 import java.nio.channels.AsynchronousSocketChannel;
 import java.util.concurrent.ExecutionException;
 
-public class Client implements Runnable{
+public class Client1 implements Runnable{
 
 	private AsynchronousSocketChannel asc ;
-	
-	public Client() throws Exception {
+
+	public Client1() throws Exception {
 		asc = AsynchronousSocketChannel.open();
 	}
 	
@@ -52,24 +52,24 @@ public class Client implements Runnable{
 	}
 	
 	public static void main(String[] args) throws Exception {
-		Client c1 = new Client();
+		Client1 c1 = new Client1();
 		c1.connect();
 		
-		Client c2 = new Client();
+		Client1 c2 = new Client1();
 		c2.connect();
 		
-		Client c3 = new Client();
+		Client1 c3 = new Client1();
 		c3.connect();
 		
-		new Thread(c1, "c1").start();
-		new Thread(c2, "c2").start();
-		new Thread(c3, "c3").start();
+		new Thread(c1, "c11").start();
+		new Thread(c2, "c12").start();
+		new Thread(c3, "c13").start();
 		
 		Thread.sleep(1000);
 		
-		c1.write("c1 aaa");//服务端发送数据
-		c2.write("c2 bbbb");
-		c3.write("c3 ccccc");
+		c1.write("c11 aaa");
+		c2.write("c12 bbbb");
+		c3.write("c13 ccccc");
 	}
 	
 }
