@@ -5,7 +5,15 @@ import java.io.InputStream;
 import java.net.InetAddress;
 import java.net.Socket;
 
-/*TCP通讯协议特点：
+/*
+长连接和短连接：
+短连接：客户端和服务端进行一次HTTP请求/响应之后，就关闭连接。所以，下一次的HTTP请求/响应操作就需要重新建立连接。
+长连接：客户端和服务端建立一次连接之后，可以在这条连接上进行多次请求/响应操作。持久连接可以设置过期时间，也可以不设置。
+https://www.cnblogs.com/shoren/p/http-connection.html
+短连接：Connection:close
+长连接：Connection:keep-alive
+
+TCP通讯协议特点：
 1. tcp是基于IO流进行数据 的传输 的，面向连接。
 	2. tcp进行数据传输的时候是没有大小限制的。
 	3. tcp是面向连接，通过三次握手的机制保证数据的完整性。 可靠协议。
