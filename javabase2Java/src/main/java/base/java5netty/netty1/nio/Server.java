@@ -77,8 +77,14 @@ public class Server implements Runnable{
 		}
 	}
 	
-	private void write(SelectionKey key) throws ClosedChannelException {
-		ServerSocketChannel ssc =  (ServerSocketChannel) key.channel();
+	private void write(SelectionKey key) throws IOException {
+		ServerSocketChannel ssc =  (ServerSocketChannel) key.channel();//这个是在服务的写
+		SocketChannel sc=(SocketChannel) key.channel();//这个是往客户端写
+		String str="我是服务端！";
+		writeBuf.put(str.getBytes());
+		//对缓冲区进行复位
+		writeBuf.flip();
+		sc.write(writeBuf);
 		//ssc.register(this.seletor, SelectionKey.OP_WRITE);
 	}
 
