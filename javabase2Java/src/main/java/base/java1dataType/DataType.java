@@ -27,7 +27,7 @@ public class DataType {
        //Integer integer=null;
        //Integer a=integer+12;//报空指针异常 所以定义包装类型时 建议默认值 包括数据的字段也建议默认值
 
-        Long a1=123200l;
+        Long a1=12320l;
         //Long a4=null;
 
         Double a3=(double)a1;
@@ -35,10 +35,24 @@ public class DataType {
         Double a2=(double)(a1/(double)100);
         System.out.println(a2);
 
-        Long s=1324l;
-        String aaa= BigDecimal.valueOf(s).divide(new BigDecimal(100)).toPlainString();
+        Long s=13240l;
+        String aaa= BigDecimal.valueOf(s).divide(new BigDecimal(100)).toPlainString()+"%";
         System.out.println(aaa);
 
+        String rate="33333333333.3330000";
+        Double rateDouble=Double.valueOf(rate)*100;//这里剩100 不要到BigDecimal那边乘100
+        System.out.println(rateDouble);
 
+
+        String rateBig= BigDecimal.valueOf(rateDouble).divide(new BigDecimal(100)).toPlainString()+"%";
+        System.out.println(rateBig);
+
+        String rateBig1= BigDecimal.valueOf(rateDouble).toPlainString()+"%";
+        System.out.println(rateBig1);
+
+
+        Double rateBig2=Double.parseDouble(rate);
+        String rateBig3= BigDecimal.valueOf(rateBig2).toPlainString()+"%";
+        System.out.println(rateBig3);
     }
 }
