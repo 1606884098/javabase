@@ -14,7 +14,7 @@ public class ServerHeartBeatHandler extends ChannelHandlerAdapter {
 	private static final String SUCCESS_KEY = "auth_success_key";
 	
 	static {
-		AUTH_IP_MAP.put("192.168.1.200", "1234");
+		AUTH_IP_MAP.put("127.0.0.1", "8500");
 	}
 	
 	private boolean auth(ChannelHandlerContext ctx, Object msg){
