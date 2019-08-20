@@ -71,7 +71,7 @@ import java.util.Date;
  */
 public class ComputerBase {
     public static void main(String[] args) {
-        String rateString="0.0073243243";
+        String rateString="0.0033333333";
         Double rateDouble=Double.parseDouble(rateString)*100;
         BigDecimal bigDecimal = BigDecimal.valueOf(rateDouble);
         System.out.println(bigDecimal.toPlainString()+"%");
