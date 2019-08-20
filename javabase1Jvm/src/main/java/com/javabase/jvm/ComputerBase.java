@@ -61,8 +61,18 @@ import java.util.Date;
 
  * jvm基础：
  *      jre=jvm+java核心类库
+ *
  *      jvm=jdk1.8.0_171\jre\bin\server\jvm.dll就是java虚拟机 java核心类库=jdk1.8.0_171\jre\lib\rt.jar
+ *
  *      jdk=jre+java开发工具包
+ *
+ *      即时编译器(JIT)
+ *     即时编译器是种特殊的编译器，它通过有效的把字节码变成机器码来提高JVM的效率。JIT这种功效很特殊，
+ *     因为他把检测到的相似的字节码编译成单一运行的机器码，从而节省了CPU的使用。这和其他的字节码编译器不同，因为他是运行时
+ *
+ *     jni
+ *     JNI是Java Native Interface的缩写，它提供了若干的API实现了Java和其他语言的通信（主要是C&C++）
+ *
  *      java规范：
  *      1.jvm规范：定了二进制class文件和jvm指令集，运行
  *      2.java语言规范：定义了什么是java语言
