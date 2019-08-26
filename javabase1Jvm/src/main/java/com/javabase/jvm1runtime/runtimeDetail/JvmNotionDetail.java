@@ -145,11 +145,13 @@ package com.javabase.jvm1runtime.runtimeDetail;
  *
     5.jvm配置参数
         内存配置基本原则：
-         新生代=Eden区+2*Survivor（也叫from to 或者s0 s1）
-         Java总内存在机器的3/4
-         堆最大和堆最小一样大，为了防止内存抖动
-         新生代栈总堆的3/8
-         幸存代为新生代的1/10也就是-XX:SurvivorRatio=8
+        Java总内存在机器的3/4
+        新生代=Eden区+2*Survivor（也叫from to 或者s0 s1）
+        新生代栈总堆的3/8
+        幸存代为新生代的1/10也就是-XX:SurvivorRatio=8
+        堆最大和堆最小一样大，为了防止内存抖动
+
+
     6.gc
      Java中，GC的对象是堆空间和永久区,可以触及的对象不可以回收，不可以触及的对象可以回收，gc不是由程序控制的
      引用计数法:
