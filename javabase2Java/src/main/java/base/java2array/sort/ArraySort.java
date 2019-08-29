@@ -10,6 +10,7 @@ public class ArraySort {
         int[] array = {42,20,17,13,28,14,23,15};
 
         array = bubbleSort(array);//1.冒泡排序法
+        System.out.println(Arrays.toString(array));
         array =selectionSort(array);//2.选择排序法
         array =insertionSort(array);//3.插入排序法
         array=quickSort(array);
