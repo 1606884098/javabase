@@ -1,5 +1,8 @@
 package base.java3oop.oop3Collection.collection;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * 集合:存储对象的容器.
  * 集合和数组的区别:
@@ -71,6 +74,75 @@ Collection接口的共性方法
 public class CollectionNotion {
 
     public static void main(String[] args) {
+        /**
+         * 数据结构的线性结构中有连续存储结构和离散存储结构
+         * 1.ArrayList
+         */
 
+        /**
+         * 2.LinkedList
+         * 链表的定义：链表是物理存储单元上非连续、非顺序的存储结构，链表的结点间通过指针相连，
+         * 每个结点只对应有一个前驱结点和一个后继结点，其中，首结点没有前驱结点，尾节点没有后
+         * 继结点。上述表述共同构成了对链表的定义
+         *
+         * 单链表：当前结点只存储了后续结点引用，相对双向链表而言，空间复杂的较好。
+         * public class Linked<E> {
+         *
+         *     private static class Node<E>{
+         *         private E item;
+         *         private Node<E> next;
+         *
+         *         Node(E data, Node<E> next) {
+         *             this.item = data;
+         *             this.next = next;
+         *         }
+         *     }
+         *
+         * }
+         * 双向链表：同时存储了前驱和后续，以空间换时间，操作遍历，但空间复杂度增加了。
+         * public class DoublyLinked<E> {
+         *
+         *
+         *     private static class Node<E>{
+         *      private Node<E> pre;//前驱引用
+         *      private E item;//当前
+         *      private Node<E> next;//后续引用
+         *
+         *      }
+         *
+           }
+         *
+         * 静态链表：利用数组巧妙的实现链表，好吧，有啥适用场景？暂时脑补不出来。
+         *
+         * public class StaticLinked<E> {
+         *
+         *     private static class Node<E> {
+
+         *     E item;//数据
+
+         *     Integer nextIndex;//后续引用的数组下标 默认情况下，应该是当前size
+         *     }
+         *
+         *
+                Node[] linkeds;
+
+            }
+         *
+         * 循环链表：双向链表的变种，正常双向链表，终端结点的后续应该是null，而循环链表，
+         * 指向的是链表的第一个结点，从而实现了闭环，大概有种画个圈圈的感觉
+         *
+         * public class CircleLinked<E> {
+         *
+         *     private static class Node<E> {
+         *         private Node<E> pre;
+         *         private E item;
+         *         private Node<E> next;//如果是终端结点，这里保存的是第一个结点的引用地址，从而形成一个闭环
+         *     }
+         * }
+         *
+         */
+        List linkedList=new LinkedList();
+        ((LinkedList) linkedList).addFirst("a");
+        ((LinkedList) linkedList).getLast();
     }
 }

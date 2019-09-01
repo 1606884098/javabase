@@ -133,5 +133,10 @@ public class TEST {
         LongAdder longAdder=new LongAdder();
         longAdder.add(1l);
         System.out.println(longAdder);
+
+
+        String[] arry=new String[3];
+        System.out.println(arry[0]);
+
     }
 }
