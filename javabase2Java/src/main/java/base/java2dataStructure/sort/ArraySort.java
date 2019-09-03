@@ -1,4 +1,4 @@
-package base.java2array.sort;
+package base.java2dataStructure.sort;
 
 import java.util.Arrays;
 
