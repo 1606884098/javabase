@@ -9,6 +9,9 @@ package base.java2dataStructure.tree;
  * 除了根结点外，每个子结点可以分为多个不相交的子树
  *
  * jdk里的东西一定是最优秀的东西
+ *
+ * 为什么HashMap用的是红黑树 mysql索引用B+tree?
+ * 因为红黑树是在内存里做查找，注定不能做大数据量的存储，B+tree是硬盘里面查找适合大数据量
  */
 public class Tree {
     public static void main(String[] args) {
@@ -23,7 +26,12 @@ public class Tree {
         }
         System.out.println("中序遍历为：");
         root.in(root);
-
+        /**
+         * 红黑树的应用：
+         * 1.HashMap jdk1.8数组+链表+红黑树
+         * 2.TreeMap set层
+         * 3.jdk Linux进程调度，nginx
+         */
     }
 
     /**
@@ -113,11 +121,63 @@ public class Tree {
      *
      * 插入的时候全是红色的
      * 旋转和变色规则：
-     *
+     *1.变色的情况：当前结点的父结点是红色，并且它的祖父结点（爷爷结点）的另一个子结点（叔叔结点）也是红色。
+     * 把父结点设为黑色
+     * 把叔叔结点设为黑色
+     * 把祖父结点（爷爷结点）设为红色
+     * 把指针定义到祖父结点设为当前要操作的
+     * 2.左旋:当前父结点时红色，叔叔结点是黑色的时候，并且当前结点是右子树。左旋
+     * 以父结点作为左旋
+     * 3.右旋:当前父结点时红色，叔叔结点是黑色的时候，并且当前结点是左子树。右旋
+     * 把父结点设为黑色
+     * 把祖父结点设为红色（爷爷结点）
+     * 以祖父结点（爷爷结点）右旋
      *
      */
 
     static class RedBlackTree{
+        private final int b=1;
+        private final int r=0;
+        private Node root;
 
+        class Node{
+            int data;
+            int color=r;
+
+            Node left;
+            Node right;
+            Node parent;
+
+            public Node(int data){
+                this.data=data;
+            }
+
+            /**
+             * 插入
+             * @param node
+             */
+            public void insert(Node node){
+                node.color=r;//插入的时候所有的点都要设置为红色
+            }
+            /**
+             * 左旋
+             * @param node
+             */
+            public void leftRotate(Node node){
+                if(node.parent!=null){
+
+                }else {
+                    //因为没有父结点，表示是根结点  根结点左旋
+                    Node right=root.right;
+                    right.right=right.left;
+                    right.left.parent=root;
+                    root.parent=right;
+                    right.parent=null;
+                    root=right;
+                }
+            }
+        }
     }
+
+
 }
