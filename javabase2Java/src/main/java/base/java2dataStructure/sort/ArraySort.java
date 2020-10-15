@@ -32,7 +32,6 @@ public class ArraySort {
         for (int i = 0; i < array.length - 1; i++) {   //表示趟数，一共array.length-1次。
             flag = false;
             for (int j = array.length - 1; j > i; j--) {//数组的最后一个元素和倒数第二个比较
-
                 if (array[j] < array[j - 1]) {
                     temp = array[j];
                     array[j] = array[j - 1];

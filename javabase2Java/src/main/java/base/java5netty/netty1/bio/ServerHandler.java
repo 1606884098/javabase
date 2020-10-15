@@ -19,7 +19,7 @@ public class ServerHandler implements Runnable{
 		BufferedReader in = null;
 		PrintWriter out = null;
 		try {
-			in = new BufferedReader(new InputStreamReader(this.socket.getInputStream()));
+			in = new BufferedReader(new InputStreamReader(this.socket.getInputStream()));//这里也是阻塞的
 			out = new PrintWriter(this.socket.getOutputStream(), true);
 			String body = null;
 			while(true){

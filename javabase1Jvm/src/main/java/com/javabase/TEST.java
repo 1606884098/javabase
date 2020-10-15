@@ -1,5 +1,7 @@
 package com.javabase;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.LongAdder;
 
@@ -8,6 +10,20 @@ import java.util.concurrent.atomic.LongAdder;
  */
 public class TEST {
     public static void main(String[] args) {
+        Map<String, Integer> map = new LinkedHashMap<>();
+        map.put("a",1);
+        map.put("b",2);
+        map.put("c",3);
+        Map<String, Integer> map1 = new LinkedHashMap<>();
+        if (map.containsKey("c")) {
+            map1.put("c", map.remove("c"));
+        }
+        if (map.containsKey("a")) {
+            map1.put("a", map.remove("a"));
+        }
+        map1.putAll(map);
+        System.out.println(map1);
+
         Object o=new Object();
         /**
          * 1.

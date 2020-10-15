@@ -5,6 +5,10 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+/**
+ * 用单线程来解决并发问题是sun开发bio的目的，redis的核心思想也是用单线程来解决并发  调用epoll函数
+ * jdk底层也是调用epoll函数
+ */
 public class Client {
 	
 	final static String ADDRESS = "127.0.0.1";

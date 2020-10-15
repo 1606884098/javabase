@@ -45,7 +45,7 @@ import java.util.Date;
     得到结果，根据指令保存到内存，或再根据指令报错到硬盘，或根据指令直接清除。
 
  平时的积累：
-    学习接口：学习接口的方法怎么用，就掌握了该接口
+    学习接口：学习接口的方法怎么用，就掌握了该接口，注释都写在接口方法上。
     启动服务器时，要先看下日志，没有报错的时候再访问
     对于数据的原则是先判断再使用，比如非空校验
     例如：Sting name=null;
@@ -86,5 +86,20 @@ public class ComputerBase {
         Date currentTime = new Date();
         String currentStr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(currentTime);//hh:mm:ss  是12小时制的
         System.out.println(currentStr);
+
+
+        String test1="qq";
+        String test2="qq";
+        String test3=new String("qq");
+        System.out.println(test1==test2);
+        System.out.println(test1==test3);
+        /**String.intern()是一个Native方法，底层调用C++的 StringTable::intern方法实现。
+         当通过语句str.intern()调用intern()方法后，JVM 就会在当前类的常量池中查找是
+         否存在与str等值的String，若存在则直接返回常量池中相应Strnig的引用；若不存在，
+         则会在常量池中创建一个等值的String，然后返回这个String在常量池中的引用。因此，
+         只要是等值的String对象，使用intern()方法返回的都是常量池中同一个String引用，所以，
+         这些等值的String对象通过intern()后使用==是可以匹配的。*/
+
+        System.out.println(test1==test3.intern());
     }
 }
