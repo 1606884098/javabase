@@ -66,6 +66,11 @@ import java.util.Date;
  */
 public class ComputerBase {
     public static void main(String[] args) {
+        Thread thread=new Thread(
+
+        );
+        thread.interrupt();
+        System.out.println(thread.isInterrupted());
         String rateString="0.0033333333";
         Double rateDouble=Double.parseDouble(rateString)*100;
         BigDecimal bigDecimal = BigDecimal.valueOf(rateDouble);
