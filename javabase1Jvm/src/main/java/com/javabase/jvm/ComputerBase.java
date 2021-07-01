@@ -87,7 +87,7 @@ public class ComputerBase {
         System.out.println(a.size());
         System.out.println(a.cardinality());
         System.out.println(a.get(21));//
-
+        System.out.println(1222321321);
         Date currentTime = new Date();
         String currentStr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(currentTime);//hh:mm:ss  是12小时制的
         System.out.println(currentStr);
